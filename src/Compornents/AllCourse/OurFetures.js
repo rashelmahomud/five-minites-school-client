@@ -1,4 +1,5 @@
 import React from 'react';
+import "./OurFetures.css";
 
 const OurFetures = () => {
     return (
@@ -51,7 +52,7 @@ const OurFetures = () => {
 
                 <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 text-center lg:m-10'>
                     <div className='lg:p-10 p-5 m-5'>
-                    <i class="text-4xl fa-solid fa-briefcase text-purple-500"></i>
+                        <i class="text-4xl fa-solid fa-briefcase text-purple-500"></i>
                         <h1 className=''>An Easy Study Aproach</h1>
                     </div>
                     <div className='lg:p-10 p-5 m-5'>
@@ -66,7 +67,7 @@ const OurFetures = () => {
                         <i class="text-4xl fa-solid fa-brain text-secondary"></i>
                         <h1 className='l'>An Skill Development Platform</h1>
                     </div>
-                    <div className='lg:p-10 p-5 m-5'>
+                    <div className='lg:p-10 p-5 m-5 pointer'>
                         <i class="text-4xl fa-solid fa-leaf text-primary"></i>
                         <h1 className=''>An Amazing Study Environment</h1>
                     </div>
