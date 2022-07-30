@@ -48,6 +48,29 @@ const OurFetures = () => {
                     </div>
 
                 </div>
+
+                <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 text-center lg:m-10'>
+                    <div className='lg:p-10 p-5 m-5'>
+                    <i class="text-4xl fa-solid fa-briefcase text-purple-500"></i>
+                        <h1 className=''>An Easy Study Aproach</h1>
+                    </div>
+                    <div className='lg:p-10 p-5 m-5'>
+                        <i class="text-4xl fa-solid fa-school-flag text-orange-500"></i>
+                        <h1 className=''>An Accredited School</h1>
+                    </div>
+                    <div className='lg:p-10 p-5 m-5'>
+                        <i class="text-4xl fa-solid fa-comment-dollar text-accent"></i>
+                        <h1 className=''>An Easy Payment Credit</h1>
+                    </div>
+                    <div className='lg:p-10 p-5 m-5'>
+                        <i class="text-4xl fa-solid fa-brain text-secondary"></i>
+                        <h1 className='l'>An Skill Development Platform</h1>
+                    </div>
+                    <div className='lg:p-10 p-5 m-5'>
+                        <i class="text-4xl fa-solid fa-leaf text-primary"></i>
+                        <h1 className=''>An Amazing Study Environment</h1>
+                    </div>
+                </div>
             </div>
         </div>
     );
