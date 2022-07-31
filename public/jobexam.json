@@ -1,0 +1,26 @@
+[
+    {
+        "_id": "1",
+        "name": "Bank Job",
+        "img": "https://i.postimg.cc/8zh9KJp3/Bank-Job.png"
+        
+    },
+    {
+        "_id": "2",
+        "name": "Developer Job",
+        "img": "https://i.postimg.cc/8zh9KJp3/Bank-Job.png"
+        
+    },
+    {
+        "_id": "3",
+        "name": "Marketing Job",
+        "img": "https://i.postimg.cc/8zh9KJp3/Bank-Job.png"
+        
+    },
+    {
+        "_id": "4",
+        "name": "Freelaning",
+        "img": "https://i.postimg.cc/8zh9KJp3/Bank-Job.png"
+       
+    }
+]
