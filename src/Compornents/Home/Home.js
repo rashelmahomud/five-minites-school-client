@@ -1,4 +1,5 @@
 import React from 'react';
+import Admissions from '../Admisson/Admissions';
 import CourseSlide from '../AllCourse/CourseSlide/CourseSlide';
 import OurFetures from '../AllCourse/OurFetures';
 import SpecialCourse from '../AllCourse/SpecialCourse/SpecialCourse';
@@ -14,6 +15,7 @@ const Home = () => {
             <CourseSlide></CourseSlide>
             
             <SpecialCourse></SpecialCourse>
+            <Admissions></Admissions>
         </div>
     );
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 const SpecialCourses = (props) => {
-    console.log(props.service);
     const { img, name, price, description } = props.service;
 
     const navigate = useNavigate();

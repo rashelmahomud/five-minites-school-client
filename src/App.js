@@ -9,6 +9,7 @@ import Dashboard from './Compornents/Dashboard/Dashboard';
 import Users from './Compornents/Dashboard/Users';
 import Payments from './Compornents/Dashboard/Payments';
 import Admin from './Compornents/Dashboard/Admin';
+import Admissions from './Compornents/Admisson/Admissions';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/admissions' element={<Admissions></Admissions>}></Route>
         <Route path='/specialDetials/:coursesId' element={<SecialCourseDetails></SecialCourseDetails>}></Route>
 
         <Route path='/dashboard' element={
