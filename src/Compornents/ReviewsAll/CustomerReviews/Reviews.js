@@ -24,7 +24,7 @@ const Reviews = () => {
         <div>
 
             <div>
-                <h1 className='text-4xl text-center my-20'>OUR STUDENTS REVIEWS!</h1>
+                <h1 className='text-4xl text-center mt-20'>OUR STUDENTS REVIEWS!</h1>
             </div>
 
             <Swiper
