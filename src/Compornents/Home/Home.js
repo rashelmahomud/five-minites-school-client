@@ -1,4 +1,5 @@
 import React from 'react';
+import Achivements from '../Achivement/Achivements';
 import Admissions from '../Admisson/Admissions';
 import CourseSlide from '../AllCourse/CourseSlide/CourseSlide';
 import OurFetures from '../AllCourse/OurFetures';
@@ -22,6 +23,7 @@ const Home = () => {
             <JobExams></JobExams>
             <CoursesVideo></CoursesVideo>
             <Reviews></Reviews>
+            <Achivements></Achivements>
         </div>
     );
 };
