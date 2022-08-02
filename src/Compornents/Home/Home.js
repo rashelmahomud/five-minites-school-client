@@ -5,6 +5,7 @@ import OurFetures from '../AllCourse/OurFetures';
 import SpecialCourse from '../AllCourse/SpecialCourse/SpecialCourse';
 import CoursesVideo from '../CoursesVideo/CoursesVideo';
 import JobExams from '../JobExam/JobExams';
+import Reviews from '../ReviewsAll/CustomerReviews/Reviews';
 import Banner from './Banner';
 
 
@@ -20,6 +21,7 @@ const Home = () => {
             <Admissions></Admissions>
             <JobExams></JobExams>
             <CoursesVideo></CoursesVideo>
+            <Reviews></Reviews>
         </div>
     );
 };
