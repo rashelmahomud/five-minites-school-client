@@ -10,6 +10,7 @@ import Users from './Compornents/Dashboard/Users';
 import Payments from './Compornents/Dashboard/Payments';
 import Admin from './Compornents/Dashboard/Admin';
 import Admissions from './Compornents/Admisson/Admissions';
+import Login from './Compornents/Shared/Login/Login';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/admissions' element={<Admissions></Admissions>}></Route>
         <Route path='/specialDetials/:coursesId' element={<SecialCourseDetails></SecialCourseDetails>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
 
         <Route path='/dashboard' element={
 
