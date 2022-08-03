@@ -1,8 +1,17 @@
 import React from 'react';
 import logo from "../../Ascert/logo/logo2.png"
 import { Link } from 'react-router-dom'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
+
+    const [user, loading, error] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+      };
 
     const navbermenu = <>
 
@@ -13,8 +22,9 @@ const Navbar = () => {
         <li><Link to="/jobs">Jobs</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/dashboard">Dashboard</Link></li>
-        
-        <li><Link to="/login">login</Link></li>
+
+        <li> { user ? <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li>
+     
 
     </>
 
@@ -49,7 +59,7 @@ const Navbar = () => {
             </label>
 
 
-                
+
             <div class="navbar-end">
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
