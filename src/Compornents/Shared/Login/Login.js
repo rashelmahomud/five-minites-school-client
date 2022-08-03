@@ -1,20 +1,41 @@
 import React from 'react';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
+import Loading from '../Loading';
+import { Link } from 'react-router-dom';
 
 
 
 
 const Login = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    let signInError;
+
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
+
+    if (error || gError) {
+        signInError = <p className='text-red-500'> {error?.message || gError?.message} </p>
+    }
+
+    if (user || gUser) {
+        console.log(user, gUser);
+    }
+
     const onSubmit = (data) => {
-
-        console.log(data)
-
+        signInWithEmailAndPassword(data.email, data.password);
     };
 
     return (
@@ -26,6 +47,7 @@ const Login = () => {
                 </div> */}
                 <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div class="card-body text-center">
+
                         <h2 className='text-4xl my-10'>Login</h2>
 
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -53,9 +75,9 @@ const Login = () => {
                                 />
 
                                 <label class="label">
-                                {errors.email?.type === 'required' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
-                                {errors.email?.type === 'pettern' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
-                                    
+                                    {errors.email?.type === 'required' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
+                                    {errors.email?.type === 'pettern' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
+
                                 </label>
                             </div>
                             {/* password for this code  */}
@@ -80,15 +102,17 @@ const Login = () => {
                                 />
 
                                 <label class="label">
-                                {errors.password?.type === 'required' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
+                                    {errors.password?.type === 'required' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
 
-                                {errors.password?.type === 'pettern' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
-                                    
+                                    {errors.password?.type === 'pettern' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
+
                                 </label>
                             </div>
-
+                            {signInError}
                             <input type="submit" value="login" className='btn w-full max-w-xs' />
                         </form>
+                        <p>New To Five Minite School <Link className='text-secondary' to="/signup">Create New Account</Link></p>
+                        <div class="divider">OR</div>
                         <button onClick={() => signInWithGoogle()} class="btn btn-outline"><i class="fa-brands fa-google text-orange-600 text-3xl"></i>Continue With Google</button>
 
                     </div>
