@@ -9,9 +9,10 @@ const Navbar = () => {
 
     const [user, loading, error] = useAuthState(auth);
 
+    console.log(user);
     const logout = () => {
         signOut(auth);
-      };
+    };
 
     const navbermenu = <>
 
@@ -23,8 +24,8 @@ const Navbar = () => {
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/dashboard">Dashboard</Link></li>
 
-        <li> { user ? <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li>
-     
+        {/* <li> { user ? <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li> */}
+
 
     </>
 
@@ -58,13 +59,12 @@ const Navbar = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
 
-
-
-            <div class="navbar-end">
+            {user ? (<div class="navbar-end">
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
-                            <img src="https://placeimg.com/80/80/people" />
+                            <img src={user.photoURL} />
+                            
                         </div>
                     </label>
                     <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
@@ -74,11 +74,13 @@ const Navbar = () => {
                                 <span class="badge">New</span>
                             </a>
                         </li>
+                        <p>{user.displayName}</p>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button>
                     </ul>
                 </div>
-            </div>
+            </div>) : (<button class="btn btn-outline btn-accent"><Link to="/login">login</Link></button>)}
+
 
 
         </div>

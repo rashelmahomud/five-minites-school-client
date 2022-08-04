@@ -115,7 +115,7 @@ const Login = () => {
                         </form>
                         <p>New To Five Minite School <Link className='text-secondary' to="/signup">Create New Account</Link></p>
                         <div class="divider">OR</div>
-                        <button onClick={() => signInWithGoogle()} class="btn btn-outline"><i class="fa-brands fa-google text-orange-600 text-3xl"></i>Continue With Google</button>
+                        <button onClick={() => signInWithGoogle()} class="btn btn-outline"><img className='w-16' src='https://i.ibb.co/SPnsmbW/goole-logo.png'  alt='Google logo' />Continue With Google</button>
 
                     </div>
                 </div>
