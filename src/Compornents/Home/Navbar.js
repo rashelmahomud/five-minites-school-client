@@ -9,7 +9,6 @@ const Navbar = () => {
 
     const [user, loading, error] = useAuthState(auth);
 
-    console.log(user);
     const logout = () => {
         signOut(auth);
     };
@@ -22,7 +21,8 @@ const Navbar = () => {
         <li><Link to="/admission">Admission</Link></li>
         <li><Link to="/jobs">Jobs</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
+
+        <li>{user ? <Link to="/dashboard">Dashboard</Link> : "" }</li>
 
         {/* <li> { user ? <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li> */}
 

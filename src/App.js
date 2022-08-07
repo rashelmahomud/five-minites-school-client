@@ -12,6 +12,8 @@ import Admin from './Compornents/Dashboard/Admin';
 import Admissions from './Compornents/Admisson/Admissions';
 import Login from './Compornents/Shared/Login/Login';
 import SignUp from './Compornents/Shared/Login/SignUp';
+import BookStores from './Compornents/BookStore/BookStores';
+import BookStoreDetails from './Compornents/BookStore/BookStoreDetails';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/admissions' element={<Admissions></Admissions>}></Route>
+        <Route path='/bookstore' element={<BookStores></BookStores>}></Route>
+        <Route path='/bookStoreDetails/:detailsId' element={<BookStoreDetails></BookStoreDetails>}></Route>
         <Route path='/specialDetials/:coursesId' element={<SecialCourseDetails></SecialCourseDetails>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
