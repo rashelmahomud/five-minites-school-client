@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const BookStoreDetails = () => {
 
@@ -30,19 +30,19 @@ const BookStoreDetails = () => {
                             <div className='py-10'>
 
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-book-medical text-4xl"></i>
+                                    <i class="fa-solid fa-book-medical text-4xl text-blue-500"></i>
                                     <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-walkie-talkie text-4xl"></i>
+                                    <i class="fa-solid fa-walkie-talkie text-4xl text-sky-500"></i>
                                     <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-file-lines text-4xl"></i>
+                                    <i class="fa-solid fa-file-lines text-4xl text-orange-500"></i>
                                     <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-file-invoice text-4xl"></i>
+                                    <i class="fa-solid fa-file-invoice text-4xl text-green-500"></i>
                                     <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
                                 </div>
 
@@ -51,7 +51,11 @@ const BookStoreDetails = () => {
 
                         </div>
                         <div>
-                            <p>hllo</p>
+                            <div className='flex lg:space-x-52 space-x-20 px-10'>
+                                <button class="btn btn-active btn-link text-black">PROMO CODE</button>
+                                <p className='text-2xl font-bold '>{newResult[0]?.price}$</p>
+                            </div>
+                            <button class="btn btn-outline btn-accent lg:w-full">BUY THIS BOOK</button>
 
                         </div>
 
