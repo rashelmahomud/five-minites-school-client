@@ -22,7 +22,7 @@ const BookStore = ({ book }) => {
                 <h2 class="card-title">{name}</h2>
                 <p>{description}</p>
                 <p>Price: {price}$</p>
-                <button onClick={()=> handelDetails(_id)} class="btn btn-outline btn-success">Success</button>
+                <button onClick={()=> handelDetails(_id)} class="btn btn-outline btn-success">DETAILS</button>
             </div>
         </div>
     );
