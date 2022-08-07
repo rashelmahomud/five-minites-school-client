@@ -35,15 +35,15 @@ const BookStoreDetails = () => {
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
                                     <i class="fa-solid fa-walkie-talkie text-4xl text-sky-500"></i>
-                                    <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
+                                    <p>Formate <br /> <span className=''>{newResult[0]?.format}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
                                     <i class="fa-solid fa-file-lines text-4xl text-orange-500"></i>
-                                    <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
+                                    <p>File Size <br /> <span className=''>{newResult[0]?.file}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
                                     <i class="fa-solid fa-file-invoice text-4xl text-green-500"></i>
-                                    <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
+                                    <p>interactive <br /> <span className=''>{newResult[0]?.interactive}</span></p>
                                 </div>
 
                             </div>
@@ -62,7 +62,8 @@ const BookStoreDetails = () => {
                     </div>
 
                     <div>
-                        <h1 class="text-2xl font-bold">{newResult[0]?.name}</h1>
+
+                        <h1 class="text-2xl font-bold">BOOK NAME: {newResult[0]?.name}</h1>
 
                     </div>
 
