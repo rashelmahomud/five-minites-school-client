@@ -66,15 +66,80 @@ const BookStoreDetails = () => {
                         <h1 class="text-2xl font-bold">{newResult[0]?.name}</h1>
 
                         <div>
+                            <h1 className='text-2xl lg:mt-10 mt-5'>Writers</h1>
+                            <div className='grid lg:grid-cols-2 grid-cols-1 gap-5 p-3'>
 
-                            <div>
-                                <img className='w-12 rounded-full' src={newResult[0]?.img1} alt='' />
-                                <div>
-                                    <h2>{newResult[0]?.Writer1}</h2>
-                                    <p>{newResult[0]?.acadamic}</p>
+                                <div className='flex gap-3 my-5'>
+                                    <img className='w-12 rounded-full' src={newResult[0]?.img1} alt='' />
+                                    <div>
+                                        <h2 className='font-bold'>{newResult[0]?.Writer1}</h2>
+                                        <p>{newResult[0]?.acadamic}</p>
+                                    </div>
+                                </div>
+                                <div className='flex gap-3 my-5'>
+                                    <img className='w-12 rounded-full' src={newResult[0]?.img2} alt='' />
+                                    <div>
+                                        <h2 className='font-bold'>{newResult[0]?.Writer2}</h2>
+                                        <p>{newResult[0]?.acadamic}</p>
+                                    </div>
+                                </div>
+                                <div className='flex gap-3 my-5'>
+                                    <img className='w-12 rounded-full' src={newResult[0]?.img3} alt='' />
+                                    <div>
+                                        <h2 className='font-bold'>{newResult[0]?.Writer3}</h2>
+                                        <p>{newResult[0]?.acadamic}</p>
+                                    </div>
+                                </div>
+                                <div className='flex gap-3 my-5'>
+                                    <img className='w-12 rounded-full' src={newResult[0]?.img4} alt='' />
+                                    <div>
+                                        <h2 className='font-bold'>{newResult[0]?.Writer4}</h2>
+                                        <p>{newResult[0]?.acadamic}</p>
+                                    </div>
                                 </div>
                             </div>
+                            <div>
+                                <div>
+                                    <h1 className='lg:w-96 '>{newResult[0]?.details}</h1>
 
+                                </div>
+                                <div className='my-3'>
+                                    <h class="text-2xl">Book Preview</h>
+                                </div>
+
+                                <div>
+                                    <div class="carousel w-80">
+                                        <div id="slide1" class="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img} class="w-80 h-40" />
+                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide4" class="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide2" class="btn btn-outline btn-circle">❯</a>
+                                            </div>
+                                        </div>
+                                        <div id="slide2" class="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img2} class="w-80 h-40" />
+                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide1" class="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide3" class="btn btn-outline btn-circle">❯</a>
+                                            </div>
+                                        </div>
+                                        <div id="slide3" class="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img3} class="w-80 h-40" />
+                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide2" class="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide4" class="btn btn-outline btn-circle">❯</a>
+                                            </div>
+                                        </div>
+                                        <div id="slide4" class="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img4} class="w-80 h-40" />
+                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide3" class="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide1" class="btn btn-outline btn-circle">❯</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
