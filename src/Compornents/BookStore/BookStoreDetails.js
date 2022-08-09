@@ -63,7 +63,19 @@ const BookStoreDetails = () => {
 
                     <div>
 
-                        <h1 class="text-2xl font-bold">BOOK NAME: {newResult[0]?.name}</h1>
+                        <h1 class="text-2xl font-bold">{newResult[0]?.name}</h1>
+
+                        <div>
+
+                            <div>
+                                <img className='w-12 rounded-full' src={newResult[0]?.img1} alt='' />
+                                <div>
+                                    <h2>{newResult[0]?.Writer1}</h2>
+                                    <p>{newResult[0]?.acadamic}</p>
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div>
 
