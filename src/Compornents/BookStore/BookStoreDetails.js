@@ -24,7 +24,7 @@ const BookStoreDetails = () => {
                     <div className='border-2 border-indigo-200 border-b-indigo-500'>
                         <div className='flex lg:p-5 p-2'>
                             <div>
-                                <img src={newResult[0]?.img} class=" lg:w-80 rounded-lg shadow-2xl" />
+                                <img src={newResult[0]?.img} class="lg:w-80 md:w-80 w-52 rounded-lg shadow-2xl" />
                             </div>
 
                             <div className='py-10'>
@@ -67,7 +67,7 @@ const BookStoreDetails = () => {
 
                         <div>
                             <h1 className='text-2xl lg:mt-10 mt-5'>Writers</h1>
-                            <div className='grid lg:grid-cols-2 grid-cols-1 gap-5 p-3'>
+                            <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 p-3'>
 
                                 <div className='flex gap-3 my-5'>
                                     <img className='w-12 rounded-full' src={newResult[0]?.img1} alt='' />
