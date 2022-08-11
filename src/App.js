@@ -14,7 +14,7 @@ import Login from './Compornents/Shared/Login/Login';
 import SignUp from './Compornents/Shared/Login/SignUp';
 import BookStores from './Compornents/BookStore/BookStores';
 import BookStoreDetails from './Compornents/BookStore/BookStoreDetails';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -28,9 +28,9 @@ function App() {
   //   }, 2000);
   // }, []);
 
-  // useEffect(() => {
-  //   setTheme(JSON.parse(window.localStorage.getItem("theme")));
-  // }, []);
+  useEffect(() => {
+    setTheme(JSON.parse(window.localStorage.getItem("theme")));
+  }, []);
 
   const handleThemeChange = () => {
     setTheme(!theme);
