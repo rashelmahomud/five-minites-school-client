@@ -16,7 +16,7 @@ const BookStore = ({ book }) => {
 
 
     return (
-        <div class="card shadow-xl border border-neutral my-5">
+        <div class="card shadow-xl my-5">
             <figure><img className='w-48 rounded-lg text-center' src={img} alt="Shoes" /></figure>
             <div class="card-body">
                 <h2 class="card-title">{name}</h2>

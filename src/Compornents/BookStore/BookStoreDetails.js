@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { useForm } from 'react-hook-form';
+import Loading from '../Shared/Loading';
 
 const BookStoreDetails = () => {
 
     const { detailsId } = useParams();
+    const [user, loading, error] = useAuthState(auth);
 
     const [details, setDetails] = useState([]);
     useEffect(() => {
@@ -15,7 +20,13 @@ const BookStoreDetails = () => {
     }, [])
 
     const newResult = details.filter(s => s._id == detailsId)
-    console.log(newResult);
+
+    const { register, handleSubmit } = useForm();
+
+    const onSubmit = data => {
+        console.log(data)
+
+    };
 
     return (
         <div>
@@ -55,7 +66,42 @@ const BookStoreDetails = () => {
                                 <button class="btn btn-active btn-link text-black">PROMO CODE</button>
                                 <p className='text-2xl font-bold '>{newResult[0]?.price}$</p>
                             </div>
-                            <button class="btn btn-outline btn-accent lg:w-full">BUY THIS BOOK</button>
+                            <button className='w-full' ><a href="#my-modal-2" class="btn btn-outline btn-accent lg:w-full">BUY THIS BOOK</a></button>
+                            <div class="modal" id="my-modal-2">
+                                <div class="modal-box">
+                                    <h3 class="font-bold text-lg text-primary">{user.displayName}</h3>
+
+                                    <form onSubmit={handleSubmit(onSubmit)}>
+
+
+                                        <div class="form-control w-full max-w-xs">
+
+                                            <input type="text" value={user.displayName} placeholder="Type here"
+                                                class="input input-bordered w-full max-w-xs my-2"{...register("book")} />
+
+                                            <input type="text" value={user.email} placeholder="Type here"
+                                                class="input input-bordered w-full max-w-xs"{...register("email")} />
+
+                                            <input type="text" value={newResult[0]?.price} $ placeholder="Type here"
+                                                class="input input-bordered w-full max-w-xs my-2"{...register("price")} />
+
+                                            <input type="text" placeholder="Phone Number"
+                                                class="input input-bordered w-full max-w-xs my-2"{...register("number")} />
+
+
+                                        </div>
+
+                                        
+                                        <button class="btn btn-outline btn-secondary"><input type="submit" /></button>
+
+                                    </form>
+
+
+                                    <div class="modal-action">
+                                        <a href="#" class="btn">X</a>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -146,7 +192,7 @@ const BookStoreDetails = () => {
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
