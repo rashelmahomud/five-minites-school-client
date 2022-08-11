@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
 
-const Navbar = () => {
+const Navbar = ({ handleThemeChange, theme }) => {
 
     const [user, loading, error] = useAuthState(auth);
 
@@ -22,7 +22,7 @@ const Navbar = () => {
         <li><Link to="/jobs">Jobs</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
 
-        <li>{user ? <Link to="/dashboard">Dashboard</Link> : "" }</li>
+        <li>{user ? <Link to="/dashboard">Dashboard</Link> : ""}</li>
 
         {/* <li> { user ? <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li> */}
 
@@ -59,12 +59,25 @@ const Navbar = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
 
+            {/* theme icon started here  */}
+            <button
+
+                onClick={handleThemeChange}
+                className="rounded-full lg:mx-2 font-bold pr-2">
+                    
+                {theme ? <i class="fa-solid fa-moon"></i> : <i class="fa-solid fa-sun"></i>}
+
+            </button>
+
+            {/* theme icon Ends here  */}
+
+
             {user ? (<div class="navbar-end">
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                         <div class="w-10 rounded-full">
                             <img src={user.photoURL} />
-                            
+
                         </div>
                     </label>
                     <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">

@@ -14,12 +14,34 @@ import Login from './Compornents/Shared/Login/Login';
 import SignUp from './Compornents/Shared/Login/SignUp';
 import BookStores from './Compornents/BookStore/BookStores';
 import BookStoreDetails from './Compornents/BookStore/BookStoreDetails';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div>
+  const [theme, setTheme] = useState(false);
 
-      <Navbar></Navbar>
+  // const [loading, setLoading] = useState(false);
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
+
+  // useEffect(() => {
+  //   setTheme(JSON.parse(window.localStorage.getItem("theme")));
+  // }, []);
+
+  const handleThemeChange = () => {
+    setTheme(!theme);
+    window.localStorage.setItem("theme", !theme);
+  };
+
+
+  return (
+    <div data-theme={theme && "my_dark"}>
+
+      <Navbar handleThemeChange={handleThemeChange} theme={theme}></Navbar>
 
       <Routes>
 
