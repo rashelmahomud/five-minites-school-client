@@ -9,7 +9,7 @@ const SpecialCourses = (props) => {
     }
     return (
         <div>
-            <div class="card w-96 bg-base-200 shadow-xl">
+            <div class="card lg:w-96 w-80 mx-auto bg-base-200 shadow-xl">
                 <figure><img src={img} alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">{name}</h2>

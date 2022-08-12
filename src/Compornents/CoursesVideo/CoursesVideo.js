@@ -17,7 +17,7 @@ const CoursesVideo = () => {
                 <input type="checkbox" id="my-modal" class="modal-toggle" />
                 <div class="modal">
                     <div class="modal-box">
-                        <iframe width="460" height="315" src="https://www.youtube.com/embed/nSbQXHzSeO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="400" height="300" src="https://www.youtube.com/embed/nSbQXHzSeO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="modal-action">
                             <label for="my-modal" class="btn">Cencel</label>
                         </div>

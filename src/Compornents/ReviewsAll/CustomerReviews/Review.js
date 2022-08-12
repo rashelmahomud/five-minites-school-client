@@ -7,7 +7,7 @@ const Review = ({ review }) => {
     return (
         <div>
 
-            <div class="card w-96 bg-base-300 shadow-xl p-5">
+            <div class="card w-96  bg-base-300 shadow-xl p-5">
                 <figure class="px-10 pt-10 w-36">
                     <img src={img} alt="Shoes" class="rounded-xl rounded-full mx-3 " />
                     <p className='w-full text-sm'><i class="fa-solid fa-house p-2 text-primary"></i>{address}</p>

@@ -4,7 +4,7 @@ const JobExam = ({ exam }) => {
     const { img, name } = exam;
 
     return (
-        <div class="card card-compact  bg-base-300 shadow-xl">
+        <div class="card card-compact w-80 mx-auto  bg-base-300 shadow-xl">
             <figure><img src={img} alt="Shoes" /></figure>
             <div class="card-body">
                 <h2 class="card-title justify-center">{name}</h2>

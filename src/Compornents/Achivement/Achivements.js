@@ -33,11 +33,11 @@ const Achivements = () => {
                         </div>
                         <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-2 gap-10'>
                             <i class="fa-solid fa-graduation-cap text-5xl text-primary"></i>
-                            <p className='text-4xl'><CountUp start={0} end={100000} duration={5} />K+ <br /> <span className='text-2xl'>Student</span></p>
+                            <p className='text-4xl'><CountUp start={0} end={10000} duration={5} />K+ <br /> <span className='text-2xl'>Student</span></p>
                         </div>
                         <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-2 gap-10'>
                             <i class="fa-solid fa-users text-5xl text-orange-500"></i>
-                            <p className='text-4xl'><CountUp start={100} end={100000} duration={5}></CountUp>M+ <br /> <span className='text-2xl'>Users</span></p>
+                            <p className='text-4xl'><CountUp start={100} end={10000} duration={5}></CountUp>M+ <br /> <span className='text-2xl'>Users</span></p>
                         </div>
                         <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-2 gap-10'>
                             <i class="fa-solid fa-video text-5xl text-green-500"></i>

@@ -11,7 +11,7 @@ const OurFetures = () => {
             <div>
                 <div className='grid grild-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 justify-center'>
 
-                    <div class="card w-96 bg-base-100 shadow-xl  m-3 hover:border hover:border-primary">
+                    <div class="card lg:w-96 w-80 mx-auto bg-base-200 shadow-xl  m-3 hover:border hover:border-primary">
                         <div class="card-body">
                             <div class="card-actions justify-center">
                                 <i class="text-4xl fa-solid fa-book-open text-sky-500"></i>
@@ -20,7 +20,7 @@ const OurFetures = () => {
 
                         </div>
                     </div>
-                    <div class="card w-96 bg-base-100 shadow-xl m-3 hover:border hover:border-secondary">
+                    <div class="card w-96 bg-base-200 w-80 mx-auto shadow-xl m-3 hover:border hover:border-secondary">
                         <div class="card-body">
                             <div class="card-actions justify-center">
                                 <i class="text-4xl fa-solid fa-graduation-cap text-green-500"></i>
@@ -29,7 +29,7 @@ const OurFetures = () => {
 
                         </div>
                     </div>
-                    <div class="card w-96 bg-base-100 shadow-xl m-3 hover:border hover:border-orange-500">
+                    <div class="card w-96 bg-base-200 w-80 mx-auto shadow-xl m-3 hover:border hover:border-orange-500">
                         <div class="card-body">
                             <div class="card-actions justify-center">
                                 <i class="text-4xl fa-solid fa-briefcase text-purple-500"></i>
@@ -38,7 +38,7 @@ const OurFetures = () => {
 
                         </div>
                     </div>
-                    <div class="card w-96 bg-base-100 shadow-xl m-3 hover:border hover:border-blue-500">
+                    <div class="card w-96 bg-base-200 w-80 mx-auto shadow-xl m-3 hover:border hover:border-blue-500">
                         <div class="card-body">
                             <div class="card-actions justify-center">
                                 <i class="text-4xl fa-solid fa-arrow-trend-up text-orange-500"></i>
