@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,15 +25,43 @@ export default function App() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
+          rotate: 0,
+          stretch: 80,
+          depth: 200,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
-        pagination={true}
+        breakpoints={{
+          "@0.25": {
+            slidesPerView: 2,
+            spaceBetween: -100,
+          },
+          "@0.75": {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          "@1.25": {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          "@1.75": {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
+
+        loop={true}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+
+
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
@@ -70,4 +99,4 @@ export default function App() {
       </Swiper>
     </>
   );
-}
+}; SwiperCore.use([Autoplay]);
