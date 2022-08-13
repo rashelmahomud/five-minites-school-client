@@ -23,6 +23,7 @@ const Navbar = ({ handleThemeChange, theme }) => {
         <li><Link to="/blogs">Blogs</Link></li>
 
         <li>{user ? <Link to="/dashboard">Dashboard</Link> : ""}</li>
+        <li>{user ? <Link to="/admin">Admin</Link> : ""}</li>
 
         {/* <li> { user ? <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li> */}
 

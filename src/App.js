@@ -8,13 +8,15 @@ import SecialCourseDetails from './Compornents/AllCourse/SpecialCourse/SecialCou
 import Dashboard from './Compornents/Dashboard/Dashboard';
 import Users from './Compornents/Dashboard/Users';
 import Payments from './Compornents/Dashboard/Payments';
-import Admin from './Compornents/Dashboard/Admin';
 import Admissions from './Compornents/Admisson/Admissions';
 import Login from './Compornents/Shared/Login/Login';
 import SignUp from './Compornents/Shared/Login/SignUp';
 import BookStores from './Compornents/BookStore/BookStores';
 import BookStoreDetails from './Compornents/BookStore/BookStoreDetails';
 import { useEffect, useState } from 'react';
+import Admin from './Compornents/Admin/Admin';
+import User from './Compornents/Admin/User';
+import Worker from './Compornents/Admin/Worker';
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -54,6 +56,16 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
 
+        <Route path='/admin' element={
+
+        <Admin></Admin>
+        
+        }>
+          <Route index element={<Worker></Worker>}></Route>
+          <Route path='user' element={<User></User>}></Route>
+
+        </Route>
+
         <Route path='/dashboard' element={
 
           <Dashboard></Dashboard>
@@ -61,7 +73,6 @@ function App() {
         }>
           <Route index element={<Users></Users>}></Route>
           <Route path='payments' element={<Payments></Payments>}></Route>
-          <Route path='admin' element={<Admin></Admin>}></Route>
 
         </Route>
 
