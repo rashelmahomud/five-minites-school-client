@@ -60,12 +60,34 @@ const Navbar = ({ handleThemeChange, theme }) => {
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
 
+            {/* notifications add  */}
+
+            <div class="dropdown">
+                <label tabindex="0" class="btn m-1">
+
+                    <i class="fa-solid fa-bell absolute"></i>
+                    {
+                        user ? (<span class="text-xs bg-red-600 rounded-full w-3 h-3 z-0 mb-3 ml-2 flex justify-center ">1</span>
+                        ) : ("")
+                    }
+
+                </label>
+                <div tabindex="0" class="dropdown-content card card-compact w-64 p-2 shadow bg-primary text-primary-content">
+                    <div class="card-body">
+                        <h3 class="card-title">WelCome!</h3>
+                        <p className='font-bold'>{user.displayName}</p>
+                        <p>Thank you for Visiting This Website.</p>
+                    </div>
+                </div>
+            </div>
+
+
             {/* theme icon started here  */}
             <button
 
                 onClick={handleThemeChange}
                 className="rounded-full lg:mx-2 font-bold pr-2">
-                    
+
                 {theme ? <i class="fa-solid fa-moon"></i> : <i class="fa-solid fa-sun"></i>}
 
             </button>

@@ -17,9 +17,17 @@ import { useEffect, useState } from 'react';
 import Admin from './Compornents/Admin/Admin';
 import User from './Compornents/Admin/User';
 import Worker from './Compornents/Admin/Worker';
+import io from 'socket.io-client';
 
 function App() {
   const [theme, setTheme] = useState(false);
+
+
+  const componentDidMount = () => {
+
+    const socket = io.connect('/');
+
+  }
 
   // const [loading, setLoading] = useState(false);
 
@@ -58,8 +66,8 @@ function App() {
 
         <Route path='/admin' element={
 
-        <Admin></Admin>
-        
+          <Admin></Admin>
+
         }>
           <Route index element={<Worker></Worker>}></Route>
           <Route path='user' element={<User></User>}></Route>
