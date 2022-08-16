@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
+import Loading from '../Shared/Loading';
 
 const Navbar = ({ handleThemeChange, theme }) => {
 
@@ -12,6 +13,10 @@ const Navbar = ({ handleThemeChange, theme }) => {
     const logout = () => {
         signOut(auth);
     };
+
+    if(loading){
+        return <Loading></Loading>
+    }
 
     const navbermenu = <>
 
@@ -67,12 +72,12 @@ const Navbar = ({ handleThemeChange, theme }) => {
 
                     <i class="fa-solid fa-bell absolute"></i>
                     {
-                        user ? (<span class="text-xs bg-red-600 rounded-full w-3 h-3 z-0 mb-3 ml-2 flex justify-center ">1</span>
+                        user ? (<span class="text-xs bg-red-600 rounded-full w-3 h-3 z-0 mb-3 ml-2 flex justify-center ">2</span>
                         ) : ("")
                     }
 
                 </label>
-                <div tabindex="0" class="dropdown-content card card-compact w-64 p-2 shadow bg-primary text-primary-content">
+                <div tabindex="0" class="dropdown-content card card-compact  p-2 shadow bg-primary text-primary-content">
                     <div class="card-body">
                         <h3 class="card-title">WelCome!</h3>
                         <p className='font-bold'>{user.displayName}</p>
