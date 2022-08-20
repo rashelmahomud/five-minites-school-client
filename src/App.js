@@ -17,17 +17,11 @@ import { useEffect, useState } from 'react';
 import Admin from './Compornents/Admin/Admin';
 import User from './Compornents/Admin/User';
 import Worker from './Compornents/Admin/Worker';
-import io from 'socket.io-client';
+import Chat from './Compornents/Chat/Chat';
 
 function App() {
   const [theme, setTheme] = useState(false);
 
-
-  const componentDidMount = () => {
-
-    const socket = io.connect('/');
-
-  }
 
   // const [loading, setLoading] = useState(false);
 
@@ -63,6 +57,7 @@ function App() {
         <Route path='/specialDetials/:coursesId' element={<SecialCourseDetails></SecialCourseDetails>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/chat' element={<Chat></Chat>}></Route>
 
         <Route path='/admin' element={
 

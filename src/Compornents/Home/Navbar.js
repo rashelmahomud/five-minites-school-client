@@ -26,6 +26,7 @@ const Navbar = ({ handleThemeChange, theme }) => {
         <li><Link to="/admission">Admission</Link></li>
         <li><Link to="/jobs">Jobs</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
+        <li><Link to="/chat">Chat</Link></li>
 
         <li>{user ? <Link to="/dashboard">Dashboard</Link> : ""}</li>
         <li>{user ? <Link to="/admin">Admin</Link> : ""}</li>
