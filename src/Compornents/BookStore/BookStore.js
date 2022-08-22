@@ -16,13 +16,13 @@ const BookStore = ({ book }) => {
 
 
     return (
-        <div class="card shadow-xl my-5 bg-base-300">
+        <div className="card shadow-xl my-5 bg-base-300">
             <figure><img className='w-48 rounded-lg text-center' src={img} alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">{name}</h2>
+            <div className="card-body">
+                <h2 className="card-title">{name}</h2>
                 <p>{description}</p>
                 <p>Price: {price}$</p>
-                <button onClick={()=> handelDetails(_id)} class="btn btn-outline btn-success">DETAILS</button>
+                <button onClick={()=> handelDetails(_id)} className="btn btn-outline btn-success">DETAILS</button>
             </div>
         </div>
     );

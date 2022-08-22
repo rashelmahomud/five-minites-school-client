@@ -6,10 +6,10 @@ const Admission = ({ admission }) => {
     return (
         <div>
 
-            <div class="card card-side bg-base-200 shadow-xl hover:scale-110 hover:shadow-xl duration-500">
+            <div className="card card-side bg-base-200 shadow-xl hover:scale-110 hover:shadow-xl duration-500">
                 <figure><img className='lg:w-48 w-28 h-20  lg:h-32 object-cover' src={img} alt="Movie" /></figure>
-                <div class="card-body">
-                    <p class="card-title">{name}</p>
+                <div className="card-body">
+                    <p className="card-title">{name}</p>
                     <h2>{instructorb}</h2>
 
                 </div>

@@ -13,8 +13,8 @@ const User = () => {
     
     return (
         <div>
-            <div class="overflow-x-auto w-full">
-                <table class="table w-full">
+            <div className="overflow-x-auto w-full">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th>Photo</th>
@@ -27,9 +27,9 @@ const User = () => {
                         <tr>
 
                             <td>
-                                <div class="flex items-center space-x-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle w-12 h-12">
+                                <div className="flex items-center space-x-3">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
                                             <img src={user.photoURL} alt="user photo" />
                                         </div>
                                     </div>
@@ -45,9 +45,9 @@ const User = () => {
                         <tr>
 
                             <td>
-                                <div class="flex items-center space-x-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle w-12 h-12">
+                                <div className="flex items-center space-x-3">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
                                             <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component" />
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@ const User = () => {
                             <td>
                                 Carroll Group
                                 <br />
-                                <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+                                <span className="badge badge-ghost badge-sm">Tax Accountant</span>
                             </td>
                             <td>Red</td>
 
@@ -65,9 +65,9 @@ const User = () => {
                         <tr>
 
                             <td>
-                                <div class="flex items-center space-x-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle w-12 h-12">
+                                <div className="flex items-center space-x-3">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
                                             <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component" />
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@ const User = () => {
                             <td>
                                 Rowe-Schoen
                                 <br />
-                                <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+                                <span className="badge badge-ghost badge-sm">Office Assistant I</span>
                             </td>
                             <td>Crimson</td>
 
@@ -85,9 +85,9 @@ const User = () => {
                         <tr>
 
                             <td>
-                                <div class="flex items-center space-x-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle w-12 h-12">
+                                <div className="flex items-center space-x-3">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
                                             <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@ const User = () => {
                             <td>
                                 Wyman-Ledner
                                 <br />
-                                <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+                                <span className="badge badge-ghost badge-sm">Community Outreach Specialist</span>
                             </td>
                             <td>Indigo</td>
 

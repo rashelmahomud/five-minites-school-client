@@ -9,14 +9,14 @@ const SpecialCourses = (props) => {
     }
     return (
         <div>
-            <div class="card lg:w-96 w-80 mx-auto bg-base-200 shadow-xl">
+            <div className="card lg:w-96 w-80 mx-auto bg-base-200 shadow-xl">
                 <figure><img src={img} alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{name}</h2>
+                <div className="card-body">
+                    <h2 className="card-title">{name}</h2>
                     <p>{description}</p>
                     <p>Price: {price}$</p>
-                    <div class="card-actions justify-end">
-                        <button onClick={() => specialCourseDetailsHandel(props.service._id) } class="btn btn-outline btn-accent">COURSES DETAILS</button>
+                    <div className="card-actions justify-end">
+                        <button onClick={() => specialCourseDetailsHandel(props.service._id) } className="btn btn-outline btn-accent">COURSES DETAILS</button>
                     </div>
                 </div>
             </div>

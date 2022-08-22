@@ -8,41 +8,41 @@ const Footer = () => {
 
     return (
         <div>
-            <footer class="footer p-10 bg-base-200 text-base-content mt-10">
+            <footer className="footer p-10 bg-base-200 text-base-content mt-10">
                 <div>
 
-                    <Link to="/" ><span class="footer-title"><img className='w-20' src={logo} alt="" /></span></Link>
-                    <a class="link link-hover">Design</a>
-                    <a class="link link-hover">Marketing</a>
+                    <Link to="/" ><span className="footer-title"><img className='w-20' src={logo} alt="" /></span></Link>
+                    <a className="link link-hover">Design</a>
+                    <a className="link link-hover">Marketing</a>
                 </div>
                 <div>
-                    <span class="footer-title">Company</span>
-                    <a class="link link-hover">About us</a>
-                    <a class="link link-hover">Contact</a>
-                    <a class="link link-hover">Job</a>
-                    <a class="link link-hover">Press kit</a>
+                    <span className="footer-title">Company</span>
+                    <a className="link link-hover">About us</a>
+                    <a className="link link-hover">Contact</a>
+                    <a className="link link-hover">Job</a>
+                    <a className="link link-hover">Press kit</a>
                 </div>
                 <div>
-                    <span class="footer-title">Legal</span>
-                    <a class="link link-hover">Terms of use</a>
-                    <a class="link link-hover">Privacy policy</a>
-                    <a class="link link-hover">Cookie policy</a>
+                    <span className="footer-title">Legal</span>
+                    <a className="link link-hover">Terms of use</a>
+                    <a className="link link-hover">Privacy policy</a>
+                    <a className="link link-hover">Cookie policy</a>
                 </div>
                 <div>
-                    <span class="footer-title">Newsletter</span>
-                    <div class="form-control w-80">
-                        <label class="label">
-                            <span class="label-text">Enter your email address</span>
+                    <span className="footer-title">Newsletter</span>
+                    <div className="form-control w-80">
+                        <label className="label">
+                            <span className="label-text">Enter your email address</span>
                         </label>
-                        <div class="relative">
-                            <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" />
-                            <button class="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                        <div className="relative">
+                            <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
+                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
                         </div>
                     </div>
                 </div>
 
             </footer>
-            <div class="p-4 bg-black text-neutral-content">
+            <div className="p-4 bg-black text-neutral-content">
 
                 <p className='text-center'>2022 - {year} Copyright © Five Minite School.<br />All rights reserved.</p>
 

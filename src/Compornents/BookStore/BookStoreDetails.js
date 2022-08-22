@@ -30,30 +30,30 @@ const BookStoreDetails = () => {
 
     return (
         <div>
-            <div class="hero">
-                <div class="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero">
+                <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className='border-2 border-indigo-200 border-b-indigo-500'>
                         <div className='flex lg:p-5 p-2'>
                             <div>
-                                <img src={newResult[0]?.img} class="lg:w-80 md:w-80 w-52 rounded-lg shadow-2xl" />
+                                <img src={newResult[0]?.img} className="lg:w-80 md:w-80 w-52 rounded-lg shadow-2xl" />
                             </div>
 
                             <div className='py-10'>
 
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-book-medical text-4xl text-blue-500"></i>
+                                    <i className="fa-solid fa-book-medical text-4xl text-blue-500"></i>
                                     <p>Pages <br /> <span className=''>{newResult[0]?.pages}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-walkie-talkie text-4xl text-sky-500"></i>
+                                    <i className="fa-solid fa-walkie-talkie text-4xl text-sky-500"></i>
                                     <p>Formate <br /> <span className=''>{newResult[0]?.format}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-file-lines text-4xl text-orange-500"></i>
+                                    <i className="fa-solid fa-file-lines text-4xl text-orange-500"></i>
                                     <p>File Size <br /> <span className=''>{newResult[0]?.file}</span></p>
                                 </div>
                                 <div className='flex p-5 gap-5 font-bold'>
-                                    <i class="fa-solid fa-file-invoice text-4xl text-green-500"></i>
+                                    <i className="fa-solid fa-file-invoice text-4xl text-green-500"></i>
                                     <p>interactive <br /> <span className=''>{newResult[0]?.interactive}</span></p>
                                 </div>
 
@@ -63,42 +63,42 @@ const BookStoreDetails = () => {
                         </div>
                         <div>
                             <div className='flex lg:space-x-52 space-x-20 px-10'>
-                                <button class="btn btn-active btn-link text-black">PROMO CODE</button>
+                                <button className="btn btn-active btn-link text-black">PROMO CODE</button>
                                 <p className='text-2xl font-bold '>{newResult[0]?.price}$</p>
                             </div>
-                            <button className='w-full' ><a href="#my-modal-2" class="btn btn-outline btn-accent lg:w-full">BUY THIS BOOK</a></button>
-                            <div class="modal" id="my-modal-2">
-                                <div class="modal-box">
-                                    <h3 class="font-bold text-lg text-primary">{user.displayName}</h3>
+                            <button className='w-full' ><a href="#my-modal-2" className="btn btn-outline btn-accent lg:w-full">BUY THIS BOOK</a></button>
+                            <div className="modal" id="my-modal-2">
+                                <div className="modal-box">
+                                    <h3 className="font-bold text-lg text-primary">{user.displayName}</h3>
 
                                     <form onSubmit={handleSubmit(onSubmit)}>
 
 
-                                        <div class="form-control w-full max-w-xs">
+                                        <div className="form-control w-full max-w-xs">
 
                                             <input type="text" value={user.displayName} placeholder="Type here"
-                                                class="input input-bordered w-full max-w-xs my-2"{...register("book")} />
+                                                className="input input-bordered w-full max-w-xs my-2"{...register("book")} />
 
                                             <input type="text" value={user.email} placeholder="Type here"
-                                                class="input input-bordered w-full max-w-xs"{...register("email")} />
+                                                className="input input-bordered w-full max-w-xs"{...register("email")} />
 
                                             <input type="text" value={newResult[0]?.price} $ placeholder="Type here"
-                                                class="input input-bordered w-full max-w-xs my-2"{...register("price")} />
+                                                className="input input-bordered w-full max-w-xs my-2"{...register("price")} />
 
                                             <input type="text" placeholder="Phone Number"
-                                                class="input input-bordered w-full max-w-xs my-2"{...register("number")} />
+                                                className="input input-bordered w-full max-w-xs my-2"{...register("number")} />
 
 
                                         </div>
 
                                         
-                                        <button class="btn btn-outline btn-secondary"><input type="submit" /></button>
+                                        <button className="btn btn-outline btn-secondary"><input type="submit" /></button>
 
                                     </form>
 
 
-                                    <div class="modal-action">
-                                        <a href="#" class="btn">X</a>
+                                    <div className="modal-action">
+                                        <a href="#" className="btn">X</a>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@ const BookStoreDetails = () => {
 
                     <div>
 
-                        <h1 class="text-2xl font-bold">{newResult[0]?.name}</h1>
+                        <h1 className="text-2xl font-bold">{newResult[0]?.name}</h1>
 
                         <div>
                             <h1 className='text-2xl lg:mt-10 mt-5'>Writers</h1>
@@ -150,37 +150,37 @@ const BookStoreDetails = () => {
 
                                 </div>
                                 <div className='my-3'>
-                                    <h class="text-2xl">Book Preview</h>
+                                    <h className="text-2xl">Book Preview</h>
                                 </div>
 
                                 <div>
-                                    <div class="carousel w-80">
-                                        <div id="slide1" class="carousel-item relative w-full">
-                                            <img src={newResult[0]?.img} class="w-80 h-40" />
-                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                                <a href="#slide4" class="btn btn-outline btn-circle">❮</a>
-                                                <a href="#slide2" class="btn btn-outline btn-circle">❯</a>
+                                    <div className="carousel w-80">
+                                        <div id="slide1" className="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img} className="w-80 h-40" />
+                                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide4" className="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide2" className="btn btn-outline btn-circle">❯</a>
                                             </div>
                                         </div>
-                                        <div id="slide2" class="carousel-item relative w-full">
-                                            <img src={newResult[0]?.img2} class="w-80 h-40" />
-                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                                <a href="#slide1" class="btn btn-outline btn-circle">❮</a>
-                                                <a href="#slide3" class="btn btn-outline btn-circle">❯</a>
+                                        <div id="slide2" className="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img2} className="w-80 h-40" />
+                                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide1" className="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide3" className="btn btn-outline btn-circle">❯</a>
                                             </div>
                                         </div>
-                                        <div id="slide3" class="carousel-item relative w-full">
-                                            <img src={newResult[0]?.img3} class="w-80 h-40" />
-                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                                <a href="#slide2" class="btn btn-outline btn-circle">❮</a>
-                                                <a href="#slide4" class="btn btn-outline btn-circle">❯</a>
+                                        <div id="slide3" className="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img3} className="w-80 h-40" />
+                                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide2" className="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide4" className="btn btn-outline btn-circle">❯</a>
                                             </div>
                                         </div>
-                                        <div id="slide4" class="carousel-item relative w-full">
-                                            <img src={newResult[0]?.img4} class="w-80 h-40" />
-                                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                                <a href="#slide3" class="btn btn-outline btn-circle">❮</a>
-                                                <a href="#slide1" class="btn btn-outline btn-circle">❯</a>
+                                        <div id="slide4" className="carousel-item relative w-full">
+                                            <img src={newResult[0]?.img4} className="w-80 h-40" />
+                                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                                <a href="#slide3" className="btn btn-outline btn-circle">❮</a>
+                                                <a href="#slide1" className="btn btn-outline btn-circle">❯</a>
                                             </div>
                                         </div>
                                     </div>

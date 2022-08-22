@@ -24,7 +24,7 @@ const Admissions = () => {
 
             </div>
 
-            <a className='flex justify-center' href='https://www.fiverr.com/rashel1998?up_rollout=true'><button class="btn btn-outline btn-secondary my-10">EXPLOR ALL PROGRAM</button></a>
+            <a className='flex justify-center' href='https://www.fiverr.com/rashel1998?up_rollout=true'><button className="btn btn-outline btn-secondary my-10">EXPLOR ALL PROGRAM</button></a>
 
         </div>
     );

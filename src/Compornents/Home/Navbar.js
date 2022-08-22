@@ -31,57 +31,57 @@ const Navbar = ({ handleThemeChange, theme }) => {
         <li>{user ? <Link to="/dashboard">Dashboard</Link> : ""}</li>
         <li>{user ? <Link to="/admin">Admin</Link> : ""}</li>
 
-        {/* <li> { user ? <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li> */}
+        {/* <li> { user ? <button onClick={logout} className="btn btn-active btn-ghost">Sign Out</button> : <Link to="/login">login</Link>}</li> */}
 
 
     </>
 
 
     return (
-        <div class="navbar border-b sticky top-0 w-full z-50 lg:px-10  bg-slate-100 bg-opacity-10 backdrop-filter backdrop-blur-lg">
-            <div class="navbar-start">
-                <div class="dropdown">
+        <div className="navbar border-b sticky top-0 w-full z-50 lg:px-10  bg-slate-100 bg-opacity-10 backdrop-filter backdrop-blur-lg">
+            <div className="navbar-start">
+                <div className="dropdown">
 
-                    <label tabindex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <label tabindex="0" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
 
-                    <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold">
+                    <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold">
 
                         {navbermenu}
 
                     </ul>
                 </div>
                 <Link to="/"><img className='w-36' src={logo} alt='' /></Link>
-                {/* <a class="normal-case text-xl"></a> */}
+                {/* <a className="normal-case text-xl"></a> */}
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal p-0 font-bold">
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal p-0 font-bold">
 
                     {navbermenu}
 
                 </ul>
             </div>
-            <label for="my-drawer-2" tabindex="0" class="btn btn-ghost lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <label for="my-drawer-2" tabindex="0" className="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
 
             {/* notifications add  */}
 
-            <div class="dropdown">
-                <label tabindex="0" class="btn m-1">
+            <div className="dropdown">
+                <label tabindex="0" className="btn m-1">
 
-                    <i class="fa-solid fa-bell absolute"></i>
+                    <i className="fa-solid fa-bell absolute"></i>
                     {
-                        user ? (<span class="text-xs bg-red-600 rounded-full w-3 h-3 z-0 mb-3 ml-2 flex justify-center ">2</span>
+                        user ? (<span className="text-xs bg-red-600 rounded-full w-3 h-3 z-0 mb-3 ml-2 flex justify-center ">2</span>
                         ) : ("")
                     }
 
                 </label>
-                <div tabindex="0" class="dropdown-content card card-compact  p-2 shadow bg-primary text-primary-content">
-                    <div class="card-body">
-                        <h3 class="card-title">WelCome!</h3>
-                        <p className='font-bold'>{user.displayName}</p>
+                <div tabindex="0" className="dropdown-content card card-compact  p-2 shadow bg-primary text-primary-content">
+                    <div className="card-body">
+                        <h3 className="card-title">WelCome!</h3>
+                        <p className='font-bold'>{user?.displayName}</p>
                         <p>Thank you for Visiting This Website.</p>
                     </div>
                 </div>
@@ -94,34 +94,34 @@ const Navbar = ({ handleThemeChange, theme }) => {
                 onClick={handleThemeChange}
                 className="rounded-full lg:mx-2 font-bold pr-2">
 
-                {theme ? <i class="fa-solid fa-moon"></i> : <i class="fa-solid fa-sun"></i>}
+                {theme ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>}
 
             </button>
 
             {/* theme icon Ends here  */}
 
 
-            {user ? (<div class="navbar-end">
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                        <div class="w-10 rounded-full">
+            {user ? (<div className="navbar-end">
+                <div className="dropdown dropdown-end">
+                    <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
                             <img src={user.photoURL} />
 
                         </div>
                     </label>
-                    <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                    <ul tabindex="0" className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                         <li>
-                            <a class="justify-between">
+                            <a className="justify-between">
                                 Profile
-                                <span class="badge">New</span>
+                                <span className="badge">New</span>
                             </a>
                         </li>
                         <p>{user.displayName}</p>
                         <li><a>Settings</a></li>
-                        <button onClick={logout} class="btn btn-active btn-ghost">Sign Out</button>
+                        <button onClick={logout} className="btn btn-active btn-ghost">Sign Out</button>
                     </ul>
                 </div>
-            </div>) : (<button class="btn btn-outline btn-accent"><Link to="/login">login</Link></button>)}
+            </div>) : (<button className="btn btn-outline btn-accent"><Link to="/login">login</Link></button>)}
 
 
 
