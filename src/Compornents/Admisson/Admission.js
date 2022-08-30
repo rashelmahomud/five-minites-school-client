@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Admission = ({ admission }) => {
-    console.log(admission);
     const { instructorb,name, img } = admission;
     return (
         <div>
